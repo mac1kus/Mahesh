@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>LP Solution</title></head>
+<body>
+    <h2>Problem Statement:</h2>
+    <pre>{{ result.problem_statement }}</pre>
+
+    <h2>Solution:</h2>
+    <p><strong>Status:</strong> {{ result.status }}</p>
+    <p><strong>Max Profit (Objective Value):</strong> {{ result.max_profit }}</p>
+
+    <h3>Variables:</h3>
+    <ul>
+        {% for var, val in result.variables.items() %}
+        <li>{{ var }} = {{ "%.2f"|format(val) }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Reduced Costs:</h3>
+    {% if result.reduced_costs %}
+    <ul>
+        {% for var, val in result.reduced_costs.items() %}
+        <li>{{ var }}: {{ val }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No reduced cost information available.</p>
+    {% endif %}
+
+    <h3>Range Report:</h3>
+    <pre>{{ result.range_report }}</pre>
+
+    <a href="/">Solve Another</a>
+</body>
+</html>
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Enter Coefficients</title></head>
+<body>
+    <h1>Objective Function and Constraints</h1>
+    <form action="/solve" method="post">
+        <input type="hidden" name="num_vars" value="{{ num_vars }}">
+        <input type="hidden" name="num_constraints" value="{{ num_constraints }}">
+
+        <h3>Objective Function Coefficients (Z = ?)</h3>
+        {% for i in range(num_vars) %}
+            <label>x{{ i+1 }}: <input type="number" name="c{{ i }}" step="any" required></label><br>
+        {% endfor %}
+
+        <h3>Constraints (Ax ≤ b)</h3>
+        {% for i in range(num_constraints) %}
+            <p>Constraint {{ i+1 }}</p>
+            {% for j in range(num_vars) %}
+                <label>a{{ i }}_{{ j }}: <input type="number" name="a{{ i }}_{{ j }}" step="any" required></label>
+            {% endfor %}
+            <label>b{{ i }}: <input type="number" name="b{{ i }}" step="any" required></label>
+            <br><br>
+        {% endfor %}
+        <input type="submit" value="Solve">
+    </form>
+</body>
+</html>
+

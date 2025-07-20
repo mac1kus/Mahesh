@@ -1,0 +1,14 @@
+c Problem:    
+c Rows:       3
+c Columns:    2
+c Non-zeros:  6
+c Status:     OPTIMAL
+c Objective:  obj = 69 (MAXimum)
+c
+s bas 3 2 f f 69
+i 1 b 6 0
+i 2 u 15 4.6
+i 3 b 24 0
+j 1 b 3 0
+j 2 l 0 -6.6
+e o f
