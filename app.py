@@ -1,4 +1,6 @@
 import os
+import sys
+print("Running on Python version:", sys.version)
 import webbrowser
 from threading import Timer
 from flask import Flask, render_template, request

@@ -1,29 +1,29 @@
 GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
 
 Problem:    
-Objective:  obj = 9.223880597 (MAXimum)
+Objective:  obj = 8.333333333 (MAXimum)
 
    No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
                                           Marginal   Upper bound          range         range   break point variable
 ------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
-     1 c1           NU     103.00000        .               -Inf         .            -.08955        .      x2
-                                            .08955     103.00000      997.55556          +Inf      89.33333 c2
+     1 c1           NU      16.00000        .               -Inf       11.25000       -.33333       6.75000 x1
+                                            .33333      16.00000       18.00000          +Inf       9.00000 x2
 
-     2 c2           BS      13.83582     120.16418          -Inf         .            -.66667        .      c1
-                                            .          134.00000       13.83582          +Inf          +Inf
+     2 c2           NU      18.00000        .               -Inf       16.00000       -.16667       8.00000 x2
+                                            .16667      18.00000       25.60000          +Inf       9.60000 x1
 
 GLPK 4.65 - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
 
 Problem:    
-Objective:  obj = 9.223880597 (MAXimum)
+Objective:  obj = 8.333333333 (MAXimum)
 
    No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
                                           Marginal   Upper bound          range         range   break point variable
 ------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
-     1 x1           NL        .            2.00000        .          -211.86842          -Inf     230.57895 c2
-                                          -1.04478          +Inf        3.02941       3.04478       6.05882 x2
+     1 x1           BS       3.16667       2.00000        .                -Inf       1.50000       6.75000 c1
+                                            .               +Inf        4.00000       2.40000       9.60000 c2
 
-     2 x2           BS       1.53731       6.00000        .                -Inf       3.94118       6.05882 x1
-                                            .               +Inf        1.53731          +Inf          +Inf
+     2 x2           BS        .66667       3.00000        .                -Inf       2.50000       8.00000 c2
+                                            .               +Inf        2.25000       4.00000       9.00000 c1
 
 End of report

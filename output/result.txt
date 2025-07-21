@@ -3,17 +3,17 @@ Rows:       2
 Columns:    2
 Non-zeros:  4
 Status:     OPTIMAL
-Objective:  obj = 9.223880597 (MAXimum)
+Objective:  obj = 8.333333333 (MAXimum)
 
    No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
 ------ ------------ -- ------------- ------------- ------------- -------------
-     1 c1           NU           103                         103     0.0895522 
-     2 c2           B        13.8358                         134 
+     1 c1           NU            16                          16      0.333333 
+     2 c2           NU            18                          18      0.166667 
 
    No. Column name  St   Activity     Lower bound   Upper bound    Marginal
 ------ ------------ -- ------------- ------------- ------------- -------------
-     1 x1           NL             0             0                    -1.04478 
-     2 x2           B        1.53731             0               
+     1 x1           B        3.16667             0               
+     2 x2           B       0.666667             0               
 
 Karush-Kuhn-Tucker optimality conditions:
 
@@ -36,9 +36,9 @@ KKT.DB: max.abs.err = 0.00e+00 on row 0
 End of output
 
 
---- Sensitivity Report (Activity & Obj Coefficient Ranges) ---
+--- Constraint Sensitivity Report ---
    No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
                                           Marginal   Upper bound          range         range   break point variable
 ------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
-     1 c1           NU     103.00000        .               -Inf         .            -.08955        .      x2
-                                            .08955     103.00000      997.55556          +Inf      89.33333 c2
+     1 c1           NU      16.00000        .               -Inf       11.25000       -.33333       6.75000 x1
+                                            .33333      16.00000       18.00000          +Inf       9.00000 x2
